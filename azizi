@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Dzakaria Azizi</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Library: Lucide Icons -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <style>
+        /* Menggunakan font Inter sebagai default */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* bg-slate-900 */
+            color: #cbd5e1; /* text-slate-300 */
+        }
+        /* Memberi padding atas pada target scroll agar tidak tertutup navbar */
+        :target {
+            scroll-padding-top: 100px;
+        }
+        /* Animasi sederhana untuk kartu proyek */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* Class untuk menandai link navigasi yang aktif */
+        .nav-active {
+            color: #38bdf8; /* text-sky-400 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-slate-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Nama -->
+                <a href="#beranda" class="text-2xl font-bold text-white tracking-wider">
+                    Dzakaria Azizi
+                </a>
+                
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Beranda</a>
+                    <a href="#tentang" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Tentang</a>
+                    <a href="#proyek" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Proyek</a>
+                    <a href="#kontak" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Kontak</a>
+                </nav>
+
+                <!-- Mobile Menu Button (opsional, untuk tampilan sederhana kita sembunyikan dulu) -->
+                <div class="md:hidden">
+                    <!-- Anda bisa menambahkan tombol menu di sini nanti -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+
+        <!-- Section 1: Beranda (Hero Section) -->
+        <section id="beranda" class="relative min-h-screen flex items-center">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                        Mengubah Ide Menjadi <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-500">Solusi Visual</span> yang Kreatif
+                    </h1>
+                    <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
+                        Saya adalah seorang Desainer Grafis, bersemangat dalam membangun identitas visual yang kuat dan menarik.
+                    </p>
+                    <div class="mt-10 flex justify-center gap-4">
+                        <a href="#proyek" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 duration-300">
+                            Lihat Proyek Saya
+                        </a>
+                        <a href="#kontak" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 duration-300">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Tentang Saya -->
+        <section id="tentang" class="py-24 bg-slate-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Tentang Saya</h2>
+                    <p class="mt-4 text-lg text-slate-400">Perkenalan singkat tentang diri saya.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-2">
+                        <img src="https://media.licdn.com/dms/image/v2/D5635AQEkbvjMFGQhsQ/profile-framedphoto-shrink_200_200/B56ZeOCNyUG0AY-/0/1750434635308?e=1752847200&v=beta&t=50gMfU3I5kDnEu6XIBzV_LbGjPYZb_fnxPus7uSHUfI" 
+                             alt="Foto Dzakaria Azizi" 
+                             class="rounded-lg shadow-2xl w-full h-auto object-cover aspect-square">
+                    </div>
+                    <div class="md:col-span-3 text-lg text-slate-300 space-y-4">
+                        <p>
+                           I am a Graphic Designer with more than 4 years of experience, specializing in creating engaging and effective visual designs for various media. During my career, I have contributed to the advertising, fashion, and publishing industries, helping to strengthen brand identity and attract audiences through strategic design.
+                        </p>
+                        <p>
+                           My expertise spans digital and print design, including UI/UX using Figma and Adobe XD, as well as design for printed materials such as brochures, catalogs, and product packaging. I am proficient in various design software such as Adobe Familly and CorelDRAW, and have experience in product photography and visual editing for branding needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Proyek -->
+        <section id="proyek" class="py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Proyek Terbaru</h2>
+                    <p class="mt-4 text-lg text-slate-400">Beberapa karya yang pernah saya buat.</p>
+                </div>
+                
+                <!-- Project Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Proyek 1 -->
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg project-card">
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQFRXw5i_80VoQ/feedshare-shrink_800/B56ZUy4bfeGQAg-/0/1740315410296?e=1755129600&v=beta&t=mf_gYW-poibjQnf0lr4ELwf_mpxeCgX6qi0Zr-eguqw" alt="Gambar Proyek 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Desain Identitas Merek</h3>
+                            <p class="text-slate-400 mb-4">Membuat logo, palet warna, dan panduan gaya untuk sebuah startup teknologi.</p>
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyek 2 -->
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg project-card">
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQFRXw5i_80VoQ/feedshare-shrink_800/B56ZUy4bfeGQAg-/0/1740315410296?e=1755129600&v=beta&t=mf_gYW-poibjQnf0lr4ELwf_mpxeCgX6qi0Zr-eguqw" alt="Gambar Proyek 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Desain UI/UX Aplikasi Mobile</h3>
+                            <p class="text-slate-400 mb-4">Merancang antarmuka pengguna yang intuitif untuk aplikasi e-commerce fashion.</p>
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyek 3 -->
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg project-card">
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQFRXw5i_80VoQ/feedshare-shrink_800/B56ZUy4bfeGQAg-/0/1740315410296?e=1755129600&v=beta&t=mf_gYW-poibjQnf0lr4ELwf_mpxeCgX6qi0Zr-eguqw" alt="Gambar Proyek 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Katalog Produk Cetak</h3>
+                            <p class="text-slate-400 mb-4">Mendesain dan menata letak katalog produk untuk perusahaan furnitur.</p>
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Kontak -->
+        <section id="kontak" class="py-24 bg-slate-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Hubungi Saya</h2>
+                    <p class="mt-4 text-lg text-slate-400">
+                        Saya terbuka untuk diskusi, kolaborasi, atau peluang baru. Jangan ragu untuk menghubungi saya.
+                    </p>
+                    <a href="mailto:emailanda@example.com" class="mt-8 inline-block bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-10 rounded-lg text-lg transition-transform transform hover:scale-105 duration-300">
+                        Kirim Email
+                    </a>
+                    
+                    <div class="mt-12 flex justify-center space-x-6">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <i data-lucide="github" class="w-8 h-8"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-8 h-8"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-slate-500">
+            <p>&copy; 2024 Dzakaria Azizi. Dibuat dengan penuh semangat.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+        
+        // JavaScript untuk menandai link navigasi yang aktif saat scrolling
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const options = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.4 // 40% dari section harus terlihat
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('nav-active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('nav-active');
+                            }
+                        });
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
